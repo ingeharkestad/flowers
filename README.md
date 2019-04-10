@@ -1,5 +1,5 @@
 # Flower species classification
-This repo contains the basic building blocks for creating an image classification model for recognizing flowers of various species. It exists as an extension of [this](https://www.tekna.no/kurs/maskinlaringsworkshop---python-36454/) machine learning workshop, and subsequent variants, hosted by [Tekna](https://www.tekna.no). The repo consists of three main components:
+This repo contains the basic building blocks for creating an image classification model for recognizing flowers of various species. It exists as an extension of [this](https://ikt.tekna.no/python-maskinlaeringsworkshop/) machine learning workshop, and subsequent variants, hosted by [Tekna](https://www.tekna.no). The repo consists of three main components:
 
 1. The slides used in the workshop
 2. A fully working guide implemented as a Jupyter Notebook
@@ -111,7 +111,11 @@ The dataset we will be using consists of images of flowers, 17 species with 80 s
 We will be using 65 images per species for training and 15 images per species for validation.
 
 #### Downloading the dataset
-The dataset can be downloaded and unzipped into this repo's root folder (remeber to ```git clone```it first) as follows:
+Clone (download) the Flowers guide from https://github.com/epimedai/flowers/blob/master/guide.ipynb to your  machine. If you have installed git, you can ```git clone``` it, otherwise you can visit the GitHub web site, press either Download or Raw, and save the file to a local folder. This folder will now be your repo's root folder.
+
+Before continuing, Windows users must download and install wget, for instance from https://eternallybored.org/misc/wget/ (version 1.20).
+
+The dataset can now be downloaded and unzipped into this repo's root folder as follows:
 
 ```
 (ml) $ wget http://www.robots.ox.ac.uk/~vgg/data/flowers/17/17flowers.tgz
@@ -121,7 +125,10 @@ or by downloading the zipped file from http://www.robots.ox.ac.uk/~vgg/data/flow
 and extracting the files into this repo's root folder
 
 #### Restructuring
-Originally, the dataset is structured by having the first 80 images belonging to the first species, the next 80 images to the second, and so on. The file ```restructure.py```, found in the repo, will build the structure we want if it is run in the same folder as ```jpg```. This step can also be done manually, see [Preparing the dataset](README.md#preparing-the-dataset) section for more info.
+Originally, the dataset is structured by having the first 80 images belonging to the first species, the next 80 images to the second, and so on. The file ```restructure.py```, found in the repo, will build the structure we want. Download it from https://github.com/epimedai/flowers/blob/master/restructure.py into the repo's root folder and run it:
+```
+(ml) $ python restructure.py
+```
 
 Make sure that the newly created folder is called ```flowers``` (this will happen automatically after running ```restructure.py```) and is placed in the same directory as this guide, i.e. root folder of this repo. When this is the case you are ready to go!
 
